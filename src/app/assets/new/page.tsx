@@ -19,8 +19,6 @@ import {
   Printer,
   Building,
   Road,
-  Hammer,
-  Truck,
   FileText,
   RotateCcw,
 } from 'lucide-react';
@@ -221,8 +219,8 @@ export default function NewAssetPage() {
                   { code: 'SEG', label: 'Road Segment (Child)', icon: Layers, desc: 'Homogeneous chainage stretch with geometry' },
                   { code: 'BRG', label: 'Bridge / Structure', icon: Building, desc: 'Major, Minor, Culverts, ROB/RUB with IBMS ID' },
                   { code: 'BLD', label: 'Public Building', icon: Building, desc: 'Offices, Hospitals, Quarters, Circuit houses' },
-                  { code: 'LND', label: 'Land & Right of Way (ROW)', icon: MapPin, desc: 'Acquired khasra survey parcels & quarry plots' },
-                  { code: 'MCH', label: 'Machinery & Equipment', icon: Truck, desc: 'Road rollers, pavers, batching plants, lab tools' },
+                  { code: 'LND', label: 'Land', icon: MapPin, desc: 'Acquired khasra survey parcels & quarry plots' },
+                  // MCH (Machinery & Equipment) hidden from UI — backend model & logic intact
                 ].map((item) => {
                   const Icon = item.icon;
                   const isSelected = classCode === item.code;
